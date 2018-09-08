@@ -3,7 +3,7 @@ This docker file is built on top of the caffe gpu image. We rebuild caffe, knowi
 
 The image can be built with:
 
-    sudo dockerbuild -t openpose:gpu .h
+    sudo dockerbuild -t openpose:gpu .
 
 Once the image is built we connect a data directory and run the image.
 
