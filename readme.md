@@ -1,5 +1,5 @@
 # Openpose Dockerfile - Nvidia GPU
-This docker file is built on top of the caffe gpu image. We rebuild caffe, knowing we have the correct requirements, as for some reason openpose does not find all the includes. The image includes all the available models at this time.
+This docker file is built on top of the caffe gpu image. We rebuild caffe, knowing we have the correct requirements, as for some reason openpose does not find all the includes. The image includes all the available models at this time.  Made available on Docker.
 
 The image can be built with:
 
