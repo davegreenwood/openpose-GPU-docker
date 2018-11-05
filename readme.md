@@ -26,3 +26,20 @@ An example for tracking a face might be:
     -write_json="/data/op_out/kp_368_640" \
     -write_video="/data/op_out/face_368_net_640.avi" \
     -camera_fps=59.94
+
+Another example, from the image pulled from docker hub.
+
+    sudo docker run --runtime=nvidia  \
+        -v ~/emo-data:/data \
+        -it dgrnwd/openpose-gpu:latest  bash
+
+
+
+    openpose \
+    -display=0 \
+    -video /data/aj-2k-sample.mov \
+    -frame_rotate=270 \
+    -face=true \
+    -write_json="/data/op_out/kp-aj-2k-sample-default" \
+    -write_video="/data/op_out/kp-aj-2k-sample-default.avi" \
+    -camera_fps=59.94
