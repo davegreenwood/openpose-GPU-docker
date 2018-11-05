@@ -5,6 +5,10 @@ The image can be built with:
 
     sudo docker build -t openpose:gpu .
 
+There is now an image on Docker hub.
+
+    docker pull dgrnwd/openpose-gpu
+
 Once the image is built we connect a data directory and run the image.
 
     docker run --runtime=nvidia  -v /media/data1:/data -it openpose:gpu bash
