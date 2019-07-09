@@ -41,6 +41,7 @@ RUN git clone  https://github.com/CMU-Perceptual-Computing-Lab/openpose.git \
     /software/openpose && \
     mkdir -p /software/openpose/build && cd /software/openpose/build && \
     cmake -D CMAKE_INSTALL_PREFIX=/usr/local  \
+	-D BUILD_PYTHON=ON \
     -D BUILD_CAFFE=ON \
     -D BUILD_EXAMPLES=ON \
     -D GPU_MODE=CUDA \
@@ -51,6 +52,7 @@ RUN git clone  https://github.com/CMU-Perceptual-Computing-Lab/openpose.git \
     -D DOWNLOAD_FACE_MODEL=ON .. && \
     make -j"$(nproc)" && \
     make install
+    
 
 # for convenience, link the openpose binary to path directory
 RUN ln -s /software/openpose/build/examples/openpose/openpose.bin \
